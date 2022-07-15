@@ -1,0 +1,232 @@
+﻿  AllAboutMemory.cpp
+D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\AllAboutMemory.cpp(13,6): warning C4101: 'array': unreferenced local variable
+D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\AllAboutMemory.cpp(15,10): warning C4101: 'vector2': unreferenced local variable
+  ArrowOperator.cpp
+D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\ArrowOperator.cpp(95,45): warning C4311: 'type cast': pointer truncation from 'float *' to 'int'
+D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\ArrowOperator.cpp(95,45): warning C4302: 'type cast': truncation from 'float *' to 'int'
+  AutoKeyword.cpp
+  Benchmarking.cpp
+  Casting.cpp
+  ConditionalAndActionBreakpoints.cpp
+  CopyAndCopyConstructor.cpp
+D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\CopyAndCopyConstructor.cpp(13,1): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  DynamicArraysAndOptimization.cpp
+D:\VS\VSItself\VC\Tools\MSVC\14.32.31326\include\xmemory(680,68): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\VS\VSItself\VC\Tools\MSVC\14.32.31326\include\vector(813): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,int,int,int>(_Alloc &,_Objty *const ,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Vertex>,
+              _Ty=Vertex,
+              _Objty=Vertex
+          ]
+D:\VS\VSItself\VC\Tools\MSVC\14.32.31326\include\vector(824): message : see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,int,int,int>(_Alloc &,_Objty *const ,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Alloc=std::allocator<Vertex>,
+              _Ty=Vertex,
+              _Objty=Vertex
+          ]
+D:\VS\VSItself\VC\Tools\MSVC\14.32.31326\include\vector(800): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<int,int,int>(int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Vertex
+          ]
+D:\VS\VSItself\VC\Tools\MSVC\14.32.31326\include\vector(806): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<int,int,int>(int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Vertex
+          ]
+D:\VS\VSItself\VC\Tools\MSVC\14.32.31326\include\vector(886): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<int,int,int>(int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Vertex
+          ]
+D:\VS\VSItself\VC\Tools\MSVC\14.32.31326\include\vector(888): message : see reference to function template instantiation '_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<int,int,int>(int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Vertex
+          ]
+D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\DynamicArraysAndOptimization.cpp(47): message : see reference to function template instantiation 'void std::vector<Vertex,std::allocator<Vertex>>::emplace_back<int,int,int>(int &&,int &&,int &&)' being compiled
+  DynamicCasting.cpp
+  FunctionPointer.cpp
+  Lambda.cpp
+  LocalStatic.cpp
+  Macros.cpp
+  MultidimensionalArrays.cpp
+  MultipleReturnValues.cpp
+D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\MultipleReturnValues.cpp(30,34): warning C4305: '=': truncation from 'double' to 'float'
+  Namespaces.cpp
+D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\Namespaces.cpp(15,32): warning C4305: '=': truncation from 'double' to 'float'
+  ObjectLifetime.cpp
+  SmartPtr.cpp
+  Sorting.cpp
+  StaticArrays.cpp
+  Compiling...
+  Templates.cpp
+D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\Templates.cpp(54,21): warning C4305: 'argument': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+  Threads.cpp
+  Timing.cpp
+  TypePunning.cpp
+  Union.cpp
+  VirtualDestructor.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 222 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  TutorialMarathon.vcxproj -> D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\x64\Release\TutorialMarathon.exe
+
+Project Performance Summary:
+    23062 ms  D:\STD\Practice\C(++) Practice\Practice2Git\TutorialMarathon\TutorialMarathon\TutorialMarathon.vcxproj   1 calls
+              23062 ms  Build                                      1 calls
+
+Target Performance Summary:
+        0 ms  AfterBuildCompileEvent                     1 calls
+        0 ms  _Link                                      1 calls
+        0 ms  AfterLink                                  1 calls
+        0 ms  ComputeLinkSwitches                        1 calls
+        0 ms  PreLinkEvent                               1 calls
+        0 ms  PrepareResourceNames                       1 calls
+        0 ms  CreateCustomManifestResourceNames          1 calls
+        0 ms  ComputeManifestInputsTargets               1 calls
+        0 ms  ComputeLinkInputsFromProject               1 calls
+        0 ms  ComputeCLGeneratedLinkInputs               1 calls
+        0 ms  ComputeManifestGeneratedLinkerInputs       1 calls
+        0 ms  ComputeRCGeneratedLinkInputs               1 calls
+        0 ms  ComputeRCOutputs                           1 calls
+        0 ms  ComputeLegacyManifestEmbedding             1 calls
+        0 ms  BuildLinkTraverse                          1 calls
+        0 ms  BuildCompile                               1 calls
+        0 ms  _BuildCompileAction                        1 calls
+        0 ms  _ResourceCompile                           1 calls
+        0 ms  AfterResourceCompile                       1 calls
+        0 ms  MakeDirsForResourceCompile                 1 calls
+        0 ms  BeforeResourceCompile                      1 calls
+        0 ms  _ClCompile                                 1 calls
+        0 ms  _ALink                                     1 calls
+        0 ms  AfterClCompile                             1 calls
+        0 ms  _Manifest                                  1 calls
+        0 ms  ResolvedXDCMake                            1 calls
+        0 ms  AfterBuild                                 1 calls
+        0 ms  BuildLink                                  1 calls
+        0 ms  _BuildLinkAction                           1 calls
+        0 ms  PostBuildEvent                             1 calls
+        0 ms  PrepareForRun                              1 calls
+        0 ms  _CheckForCompileOutputs                    1 calls
+        0 ms  _CopySourceItemsToOutputDirectory          1 calls
+        0 ms  _GetCopyToOutputDirectoryItemsFromTransitiveProjectReferences   1 calls
+        0 ms  GetCopyToOutputDirectoryXamlAppDefs        1 calls
+        0 ms  _PopulateCommonStateForGetCopyToOutputDirectoryItems   1 calls
+        0 ms  _Deploy                                    1 calls
+        0 ms  _Appverifier                               1 calls
+        0 ms  CreateSatelliteAssemblies                  1 calls
+        0 ms  _GenerateSatelliteAssemblyInputs           1 calls
+        0 ms  SatelliteDllsProjectOutputGroup            1 calls
+        0 ms  BuiltProjectOutputGroup                    1 calls
+        0 ms  _BscMake                                   1 calls
+        0 ms  MakeDirsForBscMake                         1 calls
+        0 ms  _XdcMake                                   1 calls
+        0 ms  MakeDirsForXdcMake                         1 calls
+        0 ms  ComputeCLCompileGeneratedXDCFiles          1 calls
+        0 ms  RegisterOutput                             1 calls
+        0 ms  SelectClCompile                            1 calls
+        0 ms  Build                                      1 calls
+        0 ms  BuildGenerateSourcesTraverse               1 calls
+        0 ms  _Xsd                                       1 calls
+        0 ms  CopyFileToFolders                          1 calls
+        0 ms  PrepareProjectReferences                   1 calls
+        0 ms  ResolveProjectReferences                   1 calls
+        0 ms  GetFrameworkPaths                          1 calls
+        0 ms  ComputeCustomBuildOutput                   1 calls
+        0 ms  AddExternalIncludDirectoriesToPaths        1 calls
+        0 ms  SelectCustomBuild                          1 calls
+        0 ms  _SelectedFiles                             1 calls
+        0 ms  GetResolvedWinMD                           1 calls
+        0 ms  SetCABuildNativeEnvironmentVariables       1 calls
+        0 ms  PreBuildEvent                              1 calls
+        0 ms  BeforeBuildGenerateSources                 1 calls
+        0 ms  ResolveSDKReferences                       1 calls
+        0 ms  ExpandSDKReferences                        1 calls
+        0 ms  _AddOutputPathToGlobalPropertiesToRemove   1 calls
+        0 ms  ResolveReferences                          1 calls
+        0 ms  _SplitProjectReferencesByFileExistence     1 calls
+        0 ms  AfterMidl                                  1 calls
+        0 ms  _PrepareForBuild                           1 calls
+        0 ms  _PrepareForReferenceResolution             1 calls
+        0 ms  ComputeReferenceCLInput                    1 calls
+        0 ms  GetReferencedVCProjectsInfo                1 calls
+        0 ms  FindReferenceAssembliesForReferences       1 calls
+        0 ms  ComputeCLInputPDBName                      1 calls
+        0 ms  BeforeClCompile                            1 calls
+        0 ms  ComputeMIDLGeneratedCompileInputs          1 calls
+        0 ms  BuildCompileTraverse                       1 calls
+        0 ms  BuildGenerateSources                       1 calls
+        0 ms  _BuildGenerateSourcesAction                1 calls
+        0 ms  AfterBuildGenerateSourcesEvent             1 calls
+        0 ms  AfterBuildGenerateSources                  1 calls
+        0 ms  _Midl                                      1 calls
+        0 ms  BeforeResolveReferences                    1 calls
+        0 ms  AfterResolveReferences                     1 calls
+        1 ms  GetReferenceAssemblyPaths                  1 calls
+        1 ms  BeforeLink                                 1 calls
+        1 ms  MakeDirsForCl                              1 calls
+        1 ms  _GetCopyToOutputDirectoryItemsFromThisProject   1 calls
+        1 ms  SplitResourcesByCulture                    1 calls
+        1 ms  IncrementalClean                           1 calls
+        1 ms  MakeDirsForFxc                             1 calls
+        1 ms  MakeDirsForMidl                            1 calls
+        1 ms  AssignTargetPaths                          1 calls
+        1 ms  SetBuildDefaultEnvironmentVariables        1 calls
+        1 ms  ComputeCLCompileGeneratedSbrFiles          1 calls
+        1 ms  CreateRecipeFile                           1 calls
+        1 ms  AssignProjectConfiguration                 1 calls
+        1 ms  _CheckWindowsSDKInstalled                  1 calls
+        1 ms  ComputeLinkImportLibraryOutputsForClean    1 calls
+        1 ms  SetTelemetryEnvironmentVariables           1 calls
+        1 ms  _CleanGetCurrentAndPriorFileWrites         1 calls
+        1 ms  ComputeCLOutputs                           1 calls
+        1 ms  ContentFilesProjectOutputGroup             1 calls
+        1 ms  ResolveAssemblyReferences                  1 calls
+        1 ms  CopyFilesToOutputDirectory                 1 calls
+        1 ms  DoLinkOutputFilesMatch                     1 calls
+        2 ms  _CheckForInvalidConfigurationAndPlatform   1 calls
+        2 ms  InitializeBuildStatus                      1 calls
+        2 ms  CustomBuild                                1 calls
+        2 ms  GetCopyToOutputDirectoryItems              1 calls
+        2 ms  MakeDirsForLink                            1 calls
+        2 ms  FinalizeBuildStatus                        1 calls
+        2 ms  _GetProjectReferenceTargetFrameworkProperties   1 calls
+        5 ms  PrepareForBuild                            1 calls
+        6 ms  FixupCLCompileOptions                      1 calls
+       15 ms  WarnCompileDuplicatedFilename              1 calls
+     2084 ms  Link                                       1 calls
+    20910 ms  ClCompile                                  1 calls
+
+Task Performance Summary:
+        0 ms  Message                                    3 calls
+        0 ms  ConvertToAbsolutePath                      1 calls
+        0 ms  AssignCulture                              1 calls
+        0 ms  AssignTargetPath                           7 calls
+        0 ms  WriteLinesToFile                           1 calls
+        0 ms  ReadLinesFromFile                          2 calls
+        0 ms  RemoveDuplicates                           2 calls
+        0 ms  MSBuild                                    1 calls
+        0 ms  AssignProjectConfiguration                 1 calls
+        0 ms  CheckVCToolsetVersion                      1 calls
+        1 ms  GetOutOfDateItems                          3 calls
+        1 ms  Delete                                     3 calls
+        1 ms  GenerateDesktopDeployRecipe                1 calls
+        1 ms  SetEnv                                     9 calls
+        1 ms  Touch                                      2 calls
+        2 ms  MakeDir                                   10 calls
+        2 ms  CallTarget                                 2 calls
+        2 ms  FindUnderPath                              5 calls
+     2079 ms  Link                                       1 calls
+    20905 ms  CL                                         1 calls

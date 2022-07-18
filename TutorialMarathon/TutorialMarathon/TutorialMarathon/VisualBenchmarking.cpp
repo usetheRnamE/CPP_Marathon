@@ -1,18 +1,104 @@
 #include "Print.h"
-#include <memory>
-#include <chrono>
-#include<array>
 
-class  Timer
+#include <chrono>
+#include <memory>
+#include<array>
+#include <fstream>
+
+#pragma region JSONFileConstructing
+struct ProfileResult
+{
+	std::string Name;
+	long long Start, End;
+};
+
+struct InstrumentationSession
+{
+	std::string Name;
+};
+
+class Instrumentor
+{
+private:
+	InstrumentationSession* currentSession;
+	std::ofstream outputStream;
+	int profileCount;
+public:
+	Instrumentor(): currentSession(nullptr), profileCount(0) {}
+
+	void BeginSession(const std::string& name, const std::string& filepath = "results.json")
+	{
+		outputStream.open(filepath);
+
+		WriteHeader();
+
+		currentSession = new InstrumentationSession{name};
+	}
+
+	void EndSession()
+	{
+		WriteFooter();
+
+		outputStream.close();
+
+		delete currentSession;
+		currentSession = nullptr;
+		profileCount = 0;
+	}
+
+	void WriteProfile(const ProfileResult& result)
+	{
+		if (profileCount++ > 0)
+			outputStream << ",";
+
+		std::string name = result.Name;
+		std::replace(name.begin(), name.end(), '"', '\'');
+
+		outputStream << "{";
+		outputStream << "\"cat\":\"function\",";
+		outputStream << "\"dur\":" << (result.End - result.Start) << ',';
+		outputStream << "\"name\":\"" << name << "\",";
+		outputStream << "\"ph\":\"X\",";
+		outputStream << "\"pid\":0,";
+		outputStream << "\"tid\":0,";
+		outputStream << "\"ts\":" << result.Start;
+		outputStream << "}";
+
+		outputStream.flush();
+	}
+
+	void WriteHeader()
+	{
+		outputStream << "{\"otherData\": {},\"tracEvents\":[";
+		outputStream.flush();
+	}
+
+	void WriteFooter()
+	{
+		outputStream << "]}";
+		outputStream.flush();
+	}
+
+	static Instrumentor& Get()
+	{
+		static Instrumentor* instance = new Instrumentor();
+		return *instance;
+	}
+};
+#pragma endregion
+
+#pragma region Timer
+class  InstrumentationalTimer
 {
 public:
-	Timer()
+	InstrumentationalTimer(const char* name) : timerName(name), isStopped(false)
 	{
 		startTimePoint = std::chrono::high_resolution_clock::now();
 	}
-	~Timer()
+	~InstrumentationalTimer()
 	{
-		StopTime();
+		if (!isStopped)
+			StopTime();
 	}
 
 	void StopTime()
@@ -28,68 +114,55 @@ public:
 
 		prt::Print(duration);
 		prt::Print(ms);
+
+		Instrumentor::Get().WriteProfile({ timerName, start, end });
+
+		isStopped = true;
 	}
 
 private:
+	bool isStopped;
+	std::string timerName;
 	std::chrono::time_point<std::chrono::steady_clock> startTimePoint;
 };
+#pragma endregion
 
-int MAIN27()
+#pragma region Macros
+#define PROFILING 1
+#if PROFILING
+#define PROFILE_SCOPE(name) InstrumentationalTimer timer##__LINE__(name)
+#define PROFILE_FUNCTION() PROFILE_SCOPE(__FUNCTION__)
+#else
+#define PROFILE_SCOPE(name)
+#endif
+#pragma endregion
+
+
+static void Func1()
 {
-#pragma region FirsMeasureExample
-	int value = 0;
-	{
-		Timer timer;
-		for (int i = 0; i < 999999; i++)
-			value += 2;
-	}
+	PROFILE_FUNCTION();
 
-	prt::Print(value);
-#pragma endregion
+	for (int i = 0; i < 1000; i++)
+		prt::Print("Oh boiii");
+}
 
-#pragma region SeconMeasureExample
-	struct Vector2
-	{
-		float x, y;
-	};
+static void Func2()
+{
+	PROFILE_FUNCTION();
 
-#pragma region Ex1
-	{
-		prt::Print("Make shared");
+	for (int i = 0; i < 1000; i++)
+		prt::Print("Without further interruption, let's celebrate and suck some dick.");
+	
+}
 
-		std::array<std::shared_ptr<Vector2>, 1000> sharedPtrs;
+int MAIN33()
+{
+	Instrumentor::Get().BeginSession("Profile");
 
-		Timer timer;
-		for (int i = 0; i < sharedPtrs.size(); i++)
-			sharedPtrs[i] = std::make_shared<Vector2>();
-	}
-#pragma endregion
+	Func1();
+	Func2();
 
-#pragma region Ex2
-	{
-		prt::Print("New shared");
-
-		std::array<std::shared_ptr<Vector2>, 1000> sharedPtrs;
-
-		Timer timer;
-		for (int i = 0; i < sharedPtrs.size(); i++)
-			sharedPtrs[i] = std::shared_ptr<Vector2>(new Vector2());
-	}
-#pragma endregion
-
-#pragma region Ex3
-	{
-		prt::Print("Make unique");
-
-		std::array<std::unique_ptr<Vector2>, 1000> uniquePtrs;
-
-		Timer timer;
-		for (int i = 0; i < uniquePtrs.size(); i++)
-			uniquePtrs[i] = std::make_unique<Vector2>();
-	}
-#pragma endregion
-
-#pragma endregion
+	Instrumentor::Get().EndSession();
 
 	return 0;
 }

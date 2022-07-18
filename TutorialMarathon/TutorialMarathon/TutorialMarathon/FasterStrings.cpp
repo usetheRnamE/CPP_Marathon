@@ -21,7 +21,7 @@ static void PrintName2(std::string_view name)
 	std::cout << name << std::endl;
 }
 
-int main()
+int MAIN33()
 {
 	std::string name = "ruskiy pidoras";
 
@@ -60,4 +60,6 @@ prt::Print(s_AllocCount);
 #pragma endregion
 
 	std::cin.get();
+
+	return 0;
 }

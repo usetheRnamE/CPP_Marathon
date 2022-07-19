@@ -57,12 +57,13 @@ private:
 
 #pragma endregion
 
-int main()
+int MAIN35()
 {
-
 auto& instance = Singleton::Get();
 	
 instance.Method();
 
 float num = Random::Float();
+
+return 0;
 }

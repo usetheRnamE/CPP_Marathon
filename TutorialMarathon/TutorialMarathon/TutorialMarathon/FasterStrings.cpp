@@ -2,7 +2,7 @@
 #include <string>
 
 static uint32_t s_AllocCount = 0;
-
+/* 
 void* operator new (size_t size)
 {
 	s_AllocCount++;
@@ -10,7 +10,7 @@ void* operator new (size_t size)
 
 	return malloc(size);
 }
-
+*/
 static void PrintName(const std::string& name)
 {
 	std::cout << name << std::endl;

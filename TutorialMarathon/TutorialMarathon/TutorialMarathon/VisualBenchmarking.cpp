@@ -155,7 +155,7 @@ static void Func2()
 	
 }
 
-int MAIN33()
+int MAIN34()
 {
 	Instrumentor::Get().BeginSession("Profile");
 
